@@ -36,7 +36,7 @@ FROM [SQL Tutorials].dbo.WareHouseEmployeeDemographics
 
 SELECT EmployeeID, FirstName, Age
 FROM [SQL Tutorials].dbo.EmployeeDemographics
-UNION -- STILL APPEND BECAUSE OF THE SAME DATATYPES THOUGH DIFFERENT NAME OF COLUMNS
+UNION -- STILL APPEND BECAUSE OF THE SAME DATATYPES THOUGH DIFFERENT NAME OF COLUMNS and No new columns
 SELECT EmployeeID, JobTitle, Salary
 FROM [SQL Tutorials].dbo.EmployeeSalary
 
