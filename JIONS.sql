@@ -66,3 +66,9 @@ INNER JOIN [SQL Tutorials].dbo.EmployeeSalary /*2*/
 WHERE AGE > 30 /*4*/
 GROUP BY Gender  /*5*/
 ORDER BY [Average Salary] ASC /*7*/
+
+SELECT w2.id
+FROM Weather w1
+join Weather w2
+ON DATEDIFF (w1.recordDate ,w2.recordDate ) = -1
+Where w1.temperature < w2.temperature
