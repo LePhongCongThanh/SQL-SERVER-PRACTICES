@@ -72,3 +72,11 @@ FROM Weather w1
 join Weather w2
 ON DATEDIFF (w1.recordDate ,w2.recordDate ) = -1
 Where w1.temperature < w2.temperature
+ 
+SELECT a.machine_id , round(avg(b.timestamp-a.timestamp),3) as processing_time
+from
+Activity as a
+INNER join Activity as b
+on a.machine_id = b.machine_id and a.process_id = b.process_id
+and a.activity_type = 'start' and b.activity_type = 'end'
+group by a.machine_id
